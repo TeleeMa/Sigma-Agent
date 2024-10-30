@@ -17,6 +17,15 @@ pip install -e rvt/libs/YARR
 pip install -e rvt/libs/peract_colab
 ``` 
 
+# Training
+```
+python train.py --exp_cfg_path configs/sigma_agent.yaml --device [GPU NUM]
+``` 
+
+# Evaluation
+```
+xvfb-run -a python eval.py --model-folder [PATH TO CKPT FOLDER]/sigma_agent --eval-datafolder [PATH TO RLBENCH/TEST] --tasks all --eval-episodes 25 --device 0 --headless --model-name [MODEL NAME]
+```
 
 
 ## Bibtex
